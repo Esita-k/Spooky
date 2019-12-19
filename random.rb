@@ -4,36 +4,29 @@ def rangebts
 	s = gets.chop().to_i
 	print 'Enter biggest number '
 	b = gets.chop().to_i
-	rand(s..b)
+	puts 'Enter the number of elements to be sampled'
+	c = gets.chomp().to_i
+	re = [*s..b]
 	if s>b
-		puts 'please start by entering the smallest number'
+		return 'please start by entering the smallest number'
+	elsif c < 0
+		return 'Only zero and positive numbers are allowed'
 	else
-		return rand(s..b).floor(1)
+		return re.sample(c)
 	end
 end
 
 
-def range(a,b)
+def range(a,b,c=1)
 	a.to_i
 	b.to_i
-	rand(a..b)
+	re = [*a..b]
 	if a>b
-		puts 'please start by entering the smallest number'
+		return 'please start by entering the smaller number'
 	else
-		return rand(a..b).floor(1)
+		return re.sample(c)
 	end
 end
 
-#Absolute value
-def absolutebts
-	print 'Enter number '
-	a = gets.chomp().to_i
-	a.abs
-	return a.abs
-end
 
-def absolute(a)
-a.abs
-	return a.abs
-end
 	
