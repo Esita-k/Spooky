@@ -3,8 +3,8 @@ def intdv
   list = gets.chomp
   puts 'Enter quotients'
   list_1 = gets.chomp
-  div = list.split(',').each.collect{|n| n.to_i }
-  quo = list_1.split(',').each.collect{|n| n.to_i }
+  div = list.split(',').each.collect{|n| n.to_i}
+  quo = list_1.split(',').each.collect{|n| n.to_i}
   unless div.count == quo.count
     puts 'Elements should be equal in each list'
    else
