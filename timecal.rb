@@ -1,28 +1,18 @@
-  def time
-  puts 'Enter first hour of time one'
-  a = gets.chop.to_i
-  puts 'Enter second minutes of time one'
-  b = gets.chop.to_i
-  puts 'Enter first hour of time two'
-  c = gets.chop.to_i
-  puts 'Enter second minutes of time two'
-  d = gets.chop.to_i
-  return 'That number'+ " #{a} " 'is not acceptable'+ ' only enter hours in a range 1-24' if a > 25
-  return 'That number'+ " #{c} " 'is not acceptable'+ ' only enter hours in a range 1-24' if c > 25
-  return 'That number'+ " #{b} " 'is not acceptable'+ ' only enter minutes in a range 0-59' if b > 60
-  return 'That number'+ " #{d} " 'is not acceptable'+ ' only enter minutes in a range 0-59' if d > 60
-  if a+c > 24
-    "#{a+c-24 }" +":"+ "#{ b+d}"
-  elsif a+c < 24
-    "#{a+c }" +":"+ "#{ b+d}"
-  elsif a+c > 24 && c+d > 59
-    "#{a+c-24 }" +":"+ "#{ b+d-59}"
-  elsif a+c > 24 && c+d == 60
-    "#{a+c-24 }" +":"+ "#{ }"
-  elsif a+c < 24 and c+d == 60
-    "#{a+c }" +":"+ "#{00}"
-  elsif a+c == 24 && c+d < 60
-    "#{24 }" +":"+ "#{ b+d}"
+def dd(*s)
+  num = *s
+  if num.count == 3
+    w = num[1]/60.0
+    t = num[2]/3600.0
+    y = num[0]+ w + t
+    y.floor(4)
+  elsif num.count == 1
+    po = num[0].to_i
+    ro = (num[0] - po) * 60
+    yo = (ro - ro.to_i) * 60
+    [po,ro.to_i,yo.floor(1),].join("-")
+  else
+    p 'Only one and three elements are allowed'
   end
+
 
  end
