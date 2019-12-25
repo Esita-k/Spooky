@@ -3,9 +3,9 @@ def mod(a,b)
   num_2 = b
   if b == 0
     p a
-  elsif (a.class == String) == true
+  elsif a.class == String
     p 'No strings are allowed'
-  elsif (b.class == String) == true
+  elsif b.class == String
     p 'No strings are allowed'
     else
     num_1.modulo(num_2)
@@ -18,10 +18,10 @@ def modlist
   puts 'Enter second list'
   list_2 = gets.chomp
   div = list_1.split(',').each.collect{|n| n.to_i}
-  quo = list_2.split(',').each.collect{|n| n.to_i}.map{|n| n == 0 ? 1 : n}
+  quo = list_2.split(',').each.collect{|n| n.to_i}.map{|n| n == 0 ? div[n]*2 : n}
   if  div.count != quo.count
     p 'Elements must be equal in each list'
   else
-  p div.count.times.each.map{|n| (div[n]).modulo(quo[n])}
+     p div.count.times.each.map{|n| (div[n]).modulo(quo[n])}
   end
 end
