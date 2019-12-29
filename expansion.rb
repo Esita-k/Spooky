@@ -11,5 +11,5 @@ def index(*b)
   base = *b.to_a
   pow = base.size
   com =base[0]
-  p "#{com} to the power  #{pow}"
+  p "#{com} to the power #{pow}"
 end

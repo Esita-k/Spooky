@@ -1,5 +1,6 @@
-x = -3
-begin
-  p x + 2
+x = 3
+while x < 10
   x+=1
-end while x < -4
+  break if x == 20
+  puts x
+end
