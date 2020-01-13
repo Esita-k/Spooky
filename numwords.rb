@@ -6,7 +6,6 @@ def figure(b)
               6 => 'Six hundred',7 => 'Seven hundred',8 => 'Eight hundred',9 => 'Nine hundred'}
   thousand = {0=>"",1=>"One thousand",2=>"Two thousand",3=>"Three thousand",4=>"Four thousand",5=>"Five thousand",
               6=>"Six thousand",7=>"Seven thousand",8=>"Eight thousand",9=>"Nine thousand"}
-  ones = {9=>'nineteen',8=>'eighteen',7=>'seventeen', 6=>'sixteen',5=>'fifteen', 4=>'fourteen',3=>'thirteen',2=>'twelve',1=>'eleven',0=>'ten'}
   word = number[-1]
   words = number[-2]
   wordh = number[-3]
