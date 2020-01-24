@@ -9,10 +9,10 @@ def median(*me)
 	t=middle.sort
 	p middle.sort
 	p r = middle.size/2.0
-	p y=middle.size/2.0 - 1.0
-	p z=middle.size/2.0
-	fo= t[middle.size/2.0 - 1.0] #3
-	fa= t[z=middle.size/2.0]
+	p y = middle.size/2.0 - 1.0
+	p z = middle.size/2.0
+	fo = t[middle.size/2.0 - 1.0] #3
+	fa = t[z=middle.size/2.0]
 io = fa+fo
 	p (io/2.0).floor(2.0)
 	end

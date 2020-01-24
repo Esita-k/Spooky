@@ -1,6 +1,8 @@
-x = 3
-while x < 10
-  x+=1
-  break if x == 20
-  puts x
+x = 8
+y = [2]
+
+while 8 > 1
+  y.count.times.each.map{|r| x/=y[r]}
+  break if y == 1
+  puts y
 end
