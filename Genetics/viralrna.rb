@@ -1,12 +1,14 @@
-def viralrna(a,s)
+def viralrna(a,s=nil)
   seq = a.chars.each{|z| z.upcase}
+
   sign = s
-  base = {:T => :U, :G => :C, :C => :G, :A => :U}
+  base = {:T => :A, :G => :C, :C => :G, :A => :U}
   if sign == "+"
-    seq
+    bas = {:T => :U, :G => :G, :C => :C, :A => :A}
+    seq.each.map{|f|f.to_sym}.map{|d| bas[d]}.join('-')
   elsif sign == "-"
-    'sd'
+    seq.each.map{|f|f.to_sym}.map{|n| base[n]}.join('-')
   else
-    seq
+    seq.join("-")
   end
 end
