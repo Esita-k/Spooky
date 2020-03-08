@@ -17,7 +17,7 @@ def rangebts
 end
 
 
-def range(a,b,c=1)
+def randint(a,b,c=1)
 	a.to_i
 	b.to_i
 	re = [*a..b]
