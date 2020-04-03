@@ -49,7 +49,7 @@ def incompletedominance(a,b)
       puts offspring_4.chars.sort.join + ' ' + phenotype[0]
     end
   else
-    puts 'Please enter two alleles on both sides of each parent gametes'
+    puts 'Please enter two alleles on both sides for each parent gametes'
   end
 end
 
