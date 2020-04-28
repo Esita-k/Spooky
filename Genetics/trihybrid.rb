@@ -3,11 +3,11 @@ def tricross(a,b)
   genotype_1 = a
   genotype_2 = b
   return "Gene error" if (genotype_2.class != String) or (genotype_1.class != String)
-  return 'Only four alleles are allowed' if genotype_1.size != genotype_2.size
+  return 'Only six alleles are allowed on both sides' if genotype_1.size != genotype_2.size
   return 'First two alleles are not compatible.' if (genotype_1[0..1]).upcase != (genotype_2[0..1]).upcase
   return 'second two alleles are not compatible.' if (genotype_1[2..3]).upcase != (genotype_2[2..3]).upcase
   return 'last two alleles are not compatible.' if (genotype_1[4..5]).upcase != (genotype_2[4..5]).upcase
-  return 'Only four alleles are allowed' if genotype_1.size < 6 || genotype_2.size < 6 || genotype_1.size > 6 || genotype_2.size > 6
+  return 'Only six alleles are allowed on both sides' if genotype_1.size < 6 || genotype_2.size < 6 || genotype_1.size > 6 || genotype_2.size > 6
 
   puts "Enter Dominant trait for #{(genotype_1[0]).upcase}"
   domg = gets.chomp.capitalize
@@ -17,7 +17,7 @@ def tricross(a,b)
   domg_2 = gets.chomp.capitalize
   puts "Enter recessive trait for #{(genotype_1[3]).downcase}"
   recg_2 = gets.chomp.capitalize
-  puts "Enter recessive trait for #{(genotype_1[4]).upcase}"
+  puts "Enter Dominant trait for #{(genotype_1[4]).upcase}"
   domg_3 = gets.chomp.capitalize
   puts "Enter recessive trait for #{(genotype_1[5]).downcase}"
   recg_3 = gets.chomp.capitalize

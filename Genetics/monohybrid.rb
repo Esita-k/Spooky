@@ -1,5 +1,4 @@
 
-
 def completedominance(a,b)
   genotype_1 = a.to_s
   genotype_2 = b.to_s

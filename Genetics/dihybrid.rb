@@ -38,3 +38,18 @@ def dicross(a,b)
   puts "13." + final_4[0] +" "+  "14." + final_4[1] +" "+ "15."+final_4[2] +" "+ "16."+final_4[3]
 
 end
+
+
+def rdicross(a,b,p = 0)
+  te = genotype_1 = a.to_s.swapcase, genotype_2 = b.to_s.swapcase
+  return 'Choose either parent 1 or 2' if p > 2 or p < 0
+  if p == 0
+  dicross(te[0],te[1])
+  elsif p == 1
+    tek = genotype_1 = a.to_s.swapcase, genotype_2 = b.to_s
+    dicross(tek[0],tek[1])
+  elsif p == 2
+    tei = genotype_1 = a.to_s, genotype_2 = b.to_s.swapcase
+    dicross(tei[0],tei[1])
+    end
+end
