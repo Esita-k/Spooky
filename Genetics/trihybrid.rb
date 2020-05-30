@@ -8,6 +8,8 @@ def tricross(a,b)
   return 'second two alleles are not compatible.' if (genotype_1[2..3]).upcase != (genotype_2[2..3]).upcase
   return 'last two alleles are not compatible.' if (genotype_1[4..5]).upcase != (genotype_2[4..5]).upcase
   return 'Only six alleles are allowed on both sides' if genotype_1.size < 6 || genotype_2.size < 6 || genotype_1.size > 6 || genotype_2.size > 6
+  return "Please, geneticists use letters only for genetic crosses" if ("0".."9").to_a.include?((/[0-9]/.match(genotype_1).to_s))
+  return "homologous alleles must be alike" unless genotype_1[0].upcase == genotype_1[1].upcase or genotype_1[2].upcase == genotype_1[3].upcase or genotype_1[4].upcase == genotype_1[5].upcase
 
   puts "Enter Dominant trait for #{(genotype_1[0]).upcase}"
   domg = gets.chomp.capitalize

@@ -7,6 +7,7 @@ def dicross(a,b)
   return 'First two alleles are not compatible.' if (genotype_1[0..1]).upcase != (genotype_2[0..1]).upcase
   return 'Last two alleles are not compatible.' if (genotype_1[2..3]).upcase != (genotype_2[2..3]).upcase
   return 'Only four alleles are allowed' if genotype_1.size < 4 || genotype_2.size < 4 || genotype_1.size > 4 || genotype_2.size > 4
+  return "homologous alleles must be alike" unless genotype_1[0].upcase == genotype_1[1].upcase and genotype_1[2].upcase == genotype_1[3].upcase
 
   puts "Enter Dominant trait for #{(genotype_1[0]).upcase}"
   domg = gets.chomp.capitalize
