@@ -5,7 +5,7 @@ def nitrousacid(a)
   comp = seq.chars.map{|q|base[(seq[q]).to_sym]}.join
   if sway == [1]
     tank = [] #An empty that is created to host index values
-    bag = seq.chars.each_index.map{ |e|e  }
+    bag = seq.chars.each_index.map{ |e|e }
     seq.size.times.each{|f| tank << bag[f] if seq[f] == ?C}
     tik = tank.sample(1)
     seq[tik[0]] = ?U
